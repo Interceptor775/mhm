@@ -501,13 +501,12 @@ let HelperFns = {
         HelperFns.loadSettings(),
             (HackSettings.AutoSpike.enabled = !1),
             (HelperFns.controls = new HelperFns.controller());
-        let s = document.createElement("script");
-		s.src = "https://unpkg.com/guify@0.12.0/lib/guify.min.js"
-        (s.onload = function () {
+        let MYSCRIPT = document.createElement("script");
+		MYSCRIPT.src = "https://unpkg.com/guify@0.12.0/lib/guify.min.js"
+        (MYSCRIPT.onload = function () {
             HelperFns.InitializeGUI();
         }),
-            (starve.src = "https://unpkg.com/guify@0.12.0/lib/guify.min.js"),
-            document.body.appendChild(s);
+            document.body.appendChild(MYSCRIPT);
     },
 };
 
