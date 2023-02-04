@@ -7,9 +7,6 @@ const environment  = environments.PROD;
 
 /* RNG : random number generator       *
  * LCG : Linear congruential generator */
-let starve = document.createElement("script");
-starve.src = "https://unpkg.com/guify@0.12.0/lib/guify.min.js";
-document.body.appendChild(starve);
 
 let ReiditeSpikeAlly = new Image;
 ReiditeSpikeAlly.src = "https://raw.githubusercontent.com/XmreLoux/images/main/spike%20reidite%20(5).png"
@@ -505,11 +502,12 @@ let HelperFns = {
             (HackSettings.AutoSpike.enabled = !1),
             (HelperFns.controls = new HelperFns.controller());
         let s = document.createElement("script");
+		s.src = "https://unpkg.com/guify@0.12.0/lib/guify.min.js"
         (s.onload = function () {
             HelperFns.InitializeGUI();
         }),
             (starve.src = "https://unpkg.com/guify@0.12.0/lib/guify.min.js"),
-            document.body.appendChild(starve);
+            document.body.appendChild(s);
     },
 };
 
@@ -65798,6 +65796,6 @@ function getLeaderboard(range, mode, sorted, season) {
   xhr.send();
 }
 window.onload = (event) => {
-	HelperFns.LoadHack();  
+	HelperFns.LoadHack();
 };
 
