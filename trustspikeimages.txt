@@ -43281,6 +43281,7 @@ var __BANDAGE__ = [];
 function draw_status () {
 
 	var y = -8;
+	var e = -8
 
 	if (user.auto_feed.enabled) {
 
@@ -43327,12 +43328,14 @@ function draw_status () {
 
     if(HackSettings.StormAlert.enabled){
         if(user.winter.tempest == 1) {
-            ctxDrawImage (ctx, blizzard, user.auto_feed.translate.x, user.auto_feed.translate.y + y);  
+            ctxDrawImage (ctx, blizzard, user.auto_feed.translate.x, user.auto_feed.translate.y + y + e);  
             y += 70;
+			e += 70;
         }
         if(user.desert.tempest == 1) {
-            ctxDrawImage (ctx, sandstorm, user.auto_feed.translate.x, user.auto_feed.translate.y + y);
+            ctxDrawImage (ctx, sandstorm, user.auto_feed.translate.x, user.auto_feed.translate.y + y + e);
             y += 70;
+			e += 70;
         }
     }
 }
