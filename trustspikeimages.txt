@@ -67847,7 +67847,7 @@ function buyKit(kitId, bread) {
       // A new kit was bought
       if (xhr.responseText !== "0") {
         var data = JSON.parse(xhr.responseText);
-        ui.bread -= 0;
+        ui.bread -= bread;
         ui.kit = Date.now() + Number(data);
       }
     }
